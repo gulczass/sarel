@@ -1,0 +1,117 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the article box */
+.article-box {
+    background-color: #F9FAFA;
+    border: 1px solid #E9DFCE;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1C160C;
+    margin-bottom: 10px;
+}
+
+.article-content {
+    margin-top: 10px;
+}
+
+    .article-content p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #1C160C;
+        margin-bottom: 15px;
+    }
+
+.article-image {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-top: 10px;
+}
+/* Styling for the search box */
+.search-box {
+    background-color: #F9FAFA;
+    border: 1px solid #E9DFCE;
+    border-radius: 8px;
+    padding: 20px;
+    margin-left: 20px; /* Adjust margin as needed to create space */
+    width: 300px; /* Adjust width as needed */
+}
+
+.search-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: #1C160C;
+    margin-bottom: 10px;
+}
+
+.search-form {
+    margin-top: 10px;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+    .form-group label {
+        font-size: 14px;
+        color: #1C160C;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group select,
+    .form-group input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+.search-button {
+    background-color: #019863;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+    .search-button:hover {
+        background-color: #017d51;
+    }

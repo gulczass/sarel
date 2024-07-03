@@ -1,0 +1,76 @@
+﻿@model Article
+
+@{
+    ViewData["Title"] = Model.Title;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link rel="stylesheet" as="style" onload="this.rel='stylesheet'" href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900&amp;family=Plus+Jakarta+Sans%3Awght%40400%3B500%3B700%3B800">
+
+    <title>@ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="data:image/x-icon;base64,">
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
+    <style>
+        /* Custom styles for the full article view */
+        .full-article-box {
+            margin: 20px 0;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            background-color: #FFFFFF;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+            .full-article-box:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+        .full-article-title {
+            font-size: 32px;
+            font-weight: bold;
+            color: #1C1D22;
+            margin-bottom: 20px;
+        }
+
+        .full-article-date {
+            font-size: 14px;
+            color: #7D7D7D;
+            margin-bottom: 20px;
+        }
+
+        .full-article-text {
+            font-size: 18px;
+            color: #3C3F4A;
+            line-height: 1.8;
+        }
+
+        .full-article-image {
+            margin: 20px 0;
+            max-width: 100%;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mx-auto py-6">
+        <div class="full-article-box">
+            <div class="full-article-date">
+                Published on @Model.Date.ToString("MMMM dd, yyyy")
+            </div>
+            <h1 class="full-article-title">@Model.Title</h1>
+            <img src="@Model.ImageUrl" alt="Article Image" class="full-article-image" />
+            <div class="full-article-text">
+                @Html.Raw(Model.Text)
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,18 @@
+﻿@model List<Article>
+
+@{
+    ViewData["Title"] = "Articles";
+}
+
+<div class="container">
+    <h1>Articles</h1>
+
+    @foreach (var article in Model)
+    {
+        <div class="article-summary">
+            <h2>@article.Title</h2>
+            <p>@Html.Raw(article.Text.Substring(0, Math.Min(article.Text.Length, 200)) + "...")</p>
+            <a href="/Articles/Details/@article.Id">Read more...</a>
+        </div>
+    }
+</div>

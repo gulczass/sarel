@@ -1,0 +1,9 @@
+﻿@model Article
+
+<div class="article-box border p-4 rounded-lg shadow-md mb-4">
+    <h3 class="article-title font-bold text-lg mb-2">@Model.Title</h3>
+    <p class="article-text text-sm mb-2">
+        @Html.Raw(Model.Text.Substring(0, Math.Min(Model.Text.Length, 200)) + "...")
+    </p>
+    <a href="/Articles/Details/@Model.Id" class="text-blue-500">Read more...</a>
+</div>
